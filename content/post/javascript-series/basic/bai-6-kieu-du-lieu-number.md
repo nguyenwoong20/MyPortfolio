@@ -1,5 +1,6 @@
 ---
 title: "Bài 6 - Kiểu Dữ Liệu Số Number - Làm Chủ Số Học JavaScript"
+slug: "bai-6-kieu-du-lieu-number"
 date: 2025-09-28T11:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "number", "math", "datatypes"]
@@ -93,4 +94,4 @@ console.log("Random:", random);
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 7: Khái quát kiểu dữ liệu Chuỗi (String)**](../bai-7-kieu-du-lieu-string/) - Tìm hiểu chi tiết về xử lý chuỗi trong JavaScript!
+👉 [**Bài 7: Khái quát kiểu dữ liệu Chuỗi (String)**](/MyPortfolio/p/bai-7-kieu-du-lieu-string/) - Tìm hiểu chi tiết về xử lý chuỗi trong JavaScript!

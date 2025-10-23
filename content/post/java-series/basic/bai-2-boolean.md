@@ -1,5 +1,6 @@
 ---
 title: "Bài 2 - Boolean - Cái Đúng Cái Sai trong JAVA"
+slug: "bai-2-boolean-cai-dung-cai-sai-trong-java"
 date: 2025-09-22T09:30:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -93,4 +94,4 @@ System.out.println("Đủ tuổi trưởng thành: " + isAdult);
 - boolean giúp code dễ đọc, dễ hiểu
 - Nên đặt tên biến boolean bắt đầu bằng is/has/can
 
-## Tiếp theo: [Bài 3 – Biến số](/p/java_bai3/)
+## Tiếp theo: [Bài 3 – Làm chủ String trong Java](/MyPortfolio/p/bai-3-string/)

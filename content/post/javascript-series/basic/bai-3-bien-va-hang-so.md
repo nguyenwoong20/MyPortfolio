@@ -1,5 +1,6 @@
 ---
 title: "Bài 3 - Biến và Hằng Số - Nơi Lưu Trữ Dữ Liệu"
+slug: "bai-3-bien-va-hang-so-noi-luu-tru-du-lieu"
 date: 2025-09-28T10:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "variables", "constants"]
@@ -128,4 +129,4 @@ Bài 3 giúp bạn hiểu cách khai báo và sử dụng biến (`let`) và h�
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 4: Khởi tạo biến bằng var và let**](../bai-4-var-vs-let/) - So sánh sự khác biệt giữa `var` và `let`, tại sao nên dùng `let`!
+👉 [**Bài 4: Khởi tạo biến bằng var và let**](../bai-4-toan-tu-so-hoc/) - So sánh sự khác biệt giữa `var` và `let`, tại sao nên dùng `let`!

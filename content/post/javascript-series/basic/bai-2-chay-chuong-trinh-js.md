@@ -1,5 +1,6 @@
 ---
 title: "Bài 2 - Chạy Chương Trình JavaScript Cơ Bản Bằng Node"
+slug: "bai-2-chay-chuong-trinh-js"
 date: 2025-09-28T09:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "nodejs", "hello-world"]
@@ -104,4 +105,4 @@ Bài 2 giúp bạn làm chủ cách tạo & chạy file JavaScript đầu tiên 
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 3: Biến và Hằng số**](../bai-3-bien-va-hang-so/) - Tìm hiểu cách lưu trữ và sử dụng dữ liệu trong JavaScript!
+👉 [**Bài 3: Biến và Hằng số**](../bai-3-bien-va-hang-so-noi-luu-tru-du-lieu/) - Tìm hiểu cách lưu trữ và sử dụng dữ liệu trong JavaScript!

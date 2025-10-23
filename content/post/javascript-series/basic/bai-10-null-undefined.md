@@ -1,5 +1,6 @@
 ---
 title: "Bài 10 - Null và Undefined - Hiểu Rõ Sự Khác Biệt"
+slug: "bai-10-null-undefined"
 date: 2025-09-28T13:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "null", "undefined", "datatypes"]
@@ -141,4 +142,4 @@ function processUser(userData) {
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 11: Câu lệnh điều kiện if-else, switch-case**](../bai-11-cau-lenh-dieu-kien/) - Học cách điều khiển luồng chương trình với các câu lệnh điều kiện!
+👉 [**Bài 11: Câu lệnh điều kiện if-else, switch-case**](/MyPortfolio/p/bai-11-cau-lenh-dieu-kien/) - Học cách điều khiển luồng chương trình với các câu lệnh điều kiện!

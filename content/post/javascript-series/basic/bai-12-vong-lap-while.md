@@ -1,5 +1,6 @@
 ---
 title: "Bài 12 - Vòng Lặp While - Lặp Khi Điều Kiện Đúng"
+slug: "bai-12-vong-lap-while"
 date: 2025-09-28T14:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "while-loop", "do-while", "loops"]
@@ -189,4 +190,4 @@ function getValidAge() {
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 13: Vòng lặp For**](../bai-13-vong-lap-for/) - Tìm hiểu vòng lặp for và các biến thể của nó!
+👉 [**Bài 13: Vòng lặp For**](/MyPortfolio/p/bai-13-vong-lap-for/) - Tìm hiểu vòng lặp for và các biến thể của nó!

@@ -1,5 +1,6 @@
 ---
 title: "Bài 9 - String Bất Biến (Immutable) trong Java"
+slug: "bai-9-string-immutable"
 date: 2025-09-22T13:00:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -73,4 +74,4 @@ String result = sb.toString();
 - Hiểu về String Pool giúp tối ưu bộ nhớ và viết code so sánh chính xác
 - StringBuilder là giải pháp hiệu quả khi cần thao tác String nhiều lần
 
-## Tiếp theo: [Constructor nâng cao trong Java](/p/java_constructor_advanced/)
+## Tiếp theo: [Constructor nâng cao trong Java](/MyPortfolio/p/bai-1-constructor-advanced/)

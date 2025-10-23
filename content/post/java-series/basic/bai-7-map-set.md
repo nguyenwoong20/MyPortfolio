@@ -1,5 +1,6 @@
 ---
 title: "Bài 7 - HashMap, Set và HashSet trong Java"
+slug: "bai-7-map-set"
 date: 2025-09-22T12:00:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -49,4 +50,4 @@ System.out.println(set.size()); // 2
 
 - Lưu ý: Khi thao tác với Map/Set nên thử in ra nhiều trường hợp edge case!
 
-## Tiếp theo: [Bài 8 – Enum và Wrapper Class](/p/java_bai8_enum/)
+## Tiếp theo: [Bài 8 – Enum và Wrapper Class](/MyPortfolio/p/bai-8-enum-wrapper/)

@@ -1,5 +1,6 @@
 ---
 title: "Bài 8 - Enum và Wrapper Class trong Java"
+slug: "bai-8-enum-wrapper"
 date: 2025-09-22T12:30:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -50,4 +51,4 @@ Dùng Wrapper khi làm việc với collections/ArrayList (chỉ nhận object).
 
 - Wrapper class cực kỳ hữu ích khi thao tác collection, sử dụng phương thức tiện ích của lớp đối tượng.
 
-## Tiếp theo: [Bài 9 – Exception Handling](/p/java_bai9/)
+## Tiếp theo: [Bài 9 – Exception Handling](/MyPortfolio/p/bai-9-string-immutable/)

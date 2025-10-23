@@ -1,5 +1,6 @@
 ---
 title: "Bài 3 - Làm chủ String trong Java"
+slug: "bai-3-string"
 date: 2025-09-22T10:00:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -80,4 +81,4 @@ System.out.println(a.equalsIgnoreCase(b)); // true
 
 - Biết cách dùng method hữu ích của String giúp làm việc nhanh hơn và tránh bug khó đoán lúc kiểm tra điều kiện hoặc nhập xuất.
 
-## Tiếp theo: [Bài 4 – Array & List](/p/java_bai4/)
+## Tiếp theo: [Bài 4 – Lớp (Class) và Constructor trong Java](/MyPortfolio/p/bai-4-class-constructor/)

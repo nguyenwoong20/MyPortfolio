@@ -1,8 +1,8 @@
 ---
 title: "Bài 14 - Function trong JavaScript"
+slug: "bai-14-function-javascript"
 date: 2025-09-27T09:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
-slug: "javascript_bai14_function"
 series: ["JavaScript cơ bản"]
 series_order: 14
 draft: false
@@ -65,5 +65,5 @@ console.log(global);  // OK
 console.log(local);   // ❌ Lỗi
 ```
 
-### 📚 Bài tiếp theo 
-Bài 15 - Mở rộng về Function
+### 📚 Bài tiếp theo
+👉 [**Bài 15: Function Nâng Cao - Higher-order & Callback**](/MyPortfolio/p/bai-15-function-nang-cao/) - Khám phá sức mạnh của Higher-order Functions và Callbacks trong JavaScript!

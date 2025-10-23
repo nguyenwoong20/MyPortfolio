@@ -1,5 +1,6 @@
 ---
 title: "Bài 13 - Vòng Lặp For - Lặp Với Số Lần Xác Định"
+slug: "bai-13-vong-lap-for"
 date: 2025-09-28T15:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "for-loop", "loops", "iteration"]
@@ -101,4 +102,4 @@ console.log("Chẵn:", evenCount, "Lẻ:", oddCount);
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 14: Function trong JavaScript**](../bai-14-function-javascript/) - Tìm hiểu về functions - Building blocks của JavaScript!
+👉 [**Bài 14: Function trong JavaScript**](/MyPortfolio/p/bai-14-function-javascript/) - Tìm hiểu về functions - Building blocks của JavaScript!

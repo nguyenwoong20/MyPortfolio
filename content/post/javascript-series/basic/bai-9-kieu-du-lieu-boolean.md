@@ -1,5 +1,6 @@
 ---
 title: "Bài 9 - Kiểu Dữ Liệu Boolean - Logic Đúng/Sai Trong JavaScript"
+slug: "bai-9-kieu-du-lieu-boolean"
 date: 2025-09-28T13:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "boolean", "logic", "datatypes"]
@@ -179,4 +180,4 @@ Bài 9 giúp bạn hiểu về kiểu dữ liệu Boolean với 2 giá trị `tr
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 10: Null và Undefined**](../bai-10-null-undefined/) - Tìm hiểu sự khác biệt giữa null và undefined trong JavaScript!
+👉 [**Bài 10: Null và Undefined**](/MyPortfolio/p/bai-10-null-undefined/) - Tìm hiểu sự khác biệt giữa null và undefined trong JavaScript!

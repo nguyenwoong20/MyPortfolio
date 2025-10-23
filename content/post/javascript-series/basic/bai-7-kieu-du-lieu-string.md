@@ -1,5 +1,6 @@
 ---
 title: "Bài 7 - Khái Quát Kiểu Dữ Liệu Chuỗi (String) - Xử Lý Văn Bản"
+slug: "bai-7-kieu-du-lieu-string"
 date: 2025-09-28T12:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "string", "text", "datatypes"]
@@ -145,4 +146,4 @@ Bài 7 giúp bạn hiểu về kiểu dữ liệu String, cách tạo chuỗi (s
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 8: Template Literals, Number-String**](../bai-8-template-literals/) - Tìm hiểu sâu về template literals và chuyển đổi giữa Number-String!
+👉 [**Bài 8: Template Literals, Number-String**](/MyPortfolio/p/bai-8-template-literals/) - Tìm hiểu sâu về template literals và chuyển đổi giữa Number-String!

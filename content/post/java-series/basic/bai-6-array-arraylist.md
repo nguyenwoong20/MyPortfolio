@@ -1,5 +1,6 @@
 ---
 title: "Bài 6 - Mảng (Array) và ArrayList trong Java"
+slug: "bai-6-array-arraylist"
 date: 2025-09-22T11:30:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -73,4 +74,4 @@ for (String item : list) {
 
 - Biết kết hợp duyệt mảng, thao tác cơ bản sẽ cực kỳ thuận lợi cho các bài toán lớn hơn.
 
-## Tiếp theo: [Bài 7 – HashMap & Set](/p/java_bai7_mapset/)
+## Tiếp theo: [Bài 7 – HashMap & Set](/MyPortfolio/p/bai-7-map-set/)
