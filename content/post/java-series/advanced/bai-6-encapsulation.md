@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced", "oop"]
 series: ["Java Advanced"]
 series_order: 6
+slug: "bai-6-encapsulation"
 draft: false
 image: "https://img.youtube.com/vi/rTVk4mPyenE/maxresdefault.jpg"
 ---
@@ -164,4 +165,4 @@ public final class ImmutablePoint {
 - Luôn cân nhắc access level phù hợp cho từng thành phần
 - Getter/Setter không chỉ là boilerplate code mà còn là cơ chế bảo vệ dữ liệu
 
-## Tiếp theo: [Tính Đa Hình trong Java](/p/java_polymorphism/)
+## Tiếp theo: [Bài 7: Tính Đa Hình trong Java](/MyPortfolio/p/bai-7-polymorphism/)

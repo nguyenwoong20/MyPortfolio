@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced"]
 series: ["Java Advanced"]
 series_order: 3
+slug: "bai-3-super-keyword"
 draft: false
 image: "https://img.youtube.com/vi/mmgmrG6G-lI/maxresdefault.jpg"
 ---
@@ -123,4 +124,4 @@ class Dog extends Animal {
 - Giúp tận dụng code của lớp cha một cách hiệu quả
 - Cần hiểu rõ để tránh lỗi khi override
 
-## Tiếp theo: [Lập trình hướng đối tượng trong Java](/p/java_oop/)
+## Tiếp theo: [Bài 4: Lập trình hướng đối tượng trong Java](/MyPortfolio/p/bai-4-oop-overview/)

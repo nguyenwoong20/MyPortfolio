@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced"]
 series: ["Java Advanced"]
 series_order: 10
+slug: "bai-10-exception"
 draft: false
 image: "https://img.youtube.com/vi/EVoMK9Yo0fY/maxresdefault.jpg"
 ---
@@ -93,4 +94,4 @@ class BankAccount {
 4. Tránh catch exception mà không xử lý
 5. Tạo custom exception có ý nghĩa
 
-## Tiếp theo: [Collection trong Java](/p/java_collection/)
+## Tiếp theo: [Bài 11: Collection trong Java](/MyPortfolio/p/bai-11-collection/)

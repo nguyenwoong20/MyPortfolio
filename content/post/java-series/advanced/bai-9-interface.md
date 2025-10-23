@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced", "oop"]
 series: ["Java Advanced"]
 series_order: 9
+slug: "bai-9-interface"
 draft: false
 image: "https://img.youtube.com/vi/RbhNslWAQHo/maxresdefault.jpg"
 ---
@@ -75,4 +76,4 @@ public interface Vehicle {
 }
 ```
 
-## Tiếp theo: [Xử lý ngoại lệ trong Java](/p/java_exception/)
+## Tiếp theo: [Bài 10: Xử lý ngoại lệ trong Java](/MyPortfolio/p/bai-10-exception/)
