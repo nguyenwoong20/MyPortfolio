@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/MyPortfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=MyPortfolio/livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="title: &ldquo;Bài 5 - Toán Tử Gán và Toán Tử So Sánh - Phép Toán Cơ Bản&rdquo; slug: &ldquo;bai-5-toan-tu-gan-so-sanh-updated&rdquo; date: 2025-09-28T11:00:00+07:00 categories: [&ldquo;JavaScript Series&rdquo;, &ldquo;JavaScript Cơ Bản&rdquo;] tags: [&ldquo;javascript-basic&rdquo;, &ldquo;operators&rdquo;, &ldquo;assignment&rdquo;, &ldquo;comparison&rdquo;] series: [&ldquo;JavaScript Basic&rdquo;] series_order: 5 draft: false image: &ldquo;https://img.youtube.com/vi/N2QqCxjz-hY/maxresdefault.jpg\" author: &ldquo;Code Thu&rdquo; weight: 5 summary: &ldquo;Tìm hiểu các toán tử gán và so sánh trong JavaScript - Nền tảng cho mọi phép tính và điều kiện&rdquo;\r🎥 Video hướng dẫn chi tiết\rNguồn: Khóa học JavaScript - Kteam ">
+<title></title>
+
+<link rel='canonical' href='http://localhost:1313/MyPortfolio/p/'>
+
+<link rel="stylesheet" href="/MyPortfolio/scss/style.min.5ce31a95bd07c16a43f90312c3778c1c3c4fd76a2f4ab4e4a9a319399c903666.css"><meta property='og:title' content="">
+<meta property='og:description' content="title: &ldquo;Bài 5 - Toán Tử Gán và Toán Tử So Sánh - Phép Toán Cơ Bản&rdquo; slug: &ldquo;bai-5-toan-tu-gan-so-sanh-updated&rdquo; date: 2025-09-28T11:00:00+07:00 categories: [&ldquo;JavaScript Series&rdquo;, &ldquo;JavaScript Cơ Bản&rdquo;] tags: [&ldquo;javascript-basic&rdquo;, &ldquo;operators&rdquo;, &ldquo;assignment&rdquo;, &ldquo;comparison&rdquo;] series: [&ldquo;JavaScript Basic&rdquo;] series_order: 5 draft: false image: &ldquo;https://img.youtube.com/vi/N2QqCxjz-hY/maxresdefault.jpg\" author: &ldquo;Code Thu&rdquo; weight: 5 summary: &ldquo;Tìm hiểu các toán tử gán và so sánh trong JavaScript - Nền tảng cho mọi phép tính và điều kiện&rdquo;\r🎥 Video hướng dẫn chi tiết\rNguồn: Khóa học JavaScript - Kteam ">
+<meta property='og:url' content='http://localhost:1313/MyPortfolio/p/'>
+<meta property='og:site_name' content='Woong Ho Tuan Nguyen'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' />
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="title: &ldquo;Bài 5 - Toán Tử Gán và Toán Tử So Sánh - Phép Toán Cơ Bản&rdquo; slug: &ldquo;bai-5-toan-tu-gan-so-sanh-updated&rdquo; date: 2025-09-28T11:00:00+07:00 categories: [&ldquo;JavaScript Series&rdquo;, &ldquo;JavaScript Cơ Bản&rdquo;] tags: [&ldquo;javascript-basic&rdquo;, &ldquo;operators&rdquo;, &ldquo;assignment&rdquo;, &ldquo;comparison&rdquo;] series: [&ldquo;JavaScript Basic&rdquo;] series_order: 5 draft: false image: &ldquo;https://img.youtube.com/vi/N2QqCxjz-hY/maxresdefault.jpg\" author: &ldquo;Code Thu&rdquo; weight: 5 summary: &ldquo;Tìm hiểu các toán tử gán và so sánh trong JavaScript - Nền tảng cho mọi phép tính và điều kiện&rdquo;\r🎥 Video hướng dẫn chi tiết\rNguồn: Khóa học JavaScript - Kteam ">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/MyPortfolio/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/MyPortfolio/img/avatar2_hu_24af44b6bccc68f9.png" width="300"
+                            height="411" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/MyPortfolio">Woong Ho Tuan Nguyen</a></h1>
+            <h2 class="site-description">@nguyenwoong20</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/nguyenwoong20'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/nguyen-woong-3961a8389/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:nguyenwoong20@gmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/MyPortfolio/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/post/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/MyPortfolio/p/"></a>
+        </h2>
+    
+        
+    </div>
+
+    
+
+    
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="summary-tìm-hiểu-các-toán-tử-gán-và-so-sánh-trong-javascript---nền-tảng-cho-mọi-phép-tính-và-điều-kiện">title: &ldquo;Bài 5 - Toán Tử Gán và Toán Tử So Sánh - Phép Toán Cơ Bản&rdquo;
+slug: &ldquo;bai-5-toan-tu-gan-so-sanh-updated&rdquo;
+date: 2025-09-28T11:00:00+07:00
+categories: [&ldquo;JavaScript Series&rdquo;, &ldquo;JavaScript Cơ Bản&rdquo;]
+tags: [&ldquo;javascript-basic&rdquo;, &ldquo;operators&rdquo;, &ldquo;assignment&rdquo;, &ldquo;comparison&rdquo;]
+series: [&ldquo;JavaScript Basic&rdquo;]
+series_order: 5
+draft: false
+image: &ldquo;<a class="link" href="https://img.youtube.com/vi/N2QqCxjz-hY/maxresdefault.jpg%22"  target="_blank" rel="noopener"
+    >https://img.youtube.com/vi/N2QqCxjz-hY/maxresdefault.jpg"</a>
+author: &ldquo;Code Thu&rdquo;
+weight: 5
+summary: &ldquo;Tìm hiểu các toán tử gán và so sánh trong JavaScript - Nền tảng cho mọi phép tính và điều kiện&rdquo;
+</h2><h2 id="-video-hướng-dẫn-chi-tiết">🎥 Video hướng dẫn chi tiết
+</h2><p><strong>Nguồn:</strong> <a class="link" href="https://www.youtube.com/playlist?list=PL33lvabfss1ywJRoh40x9fmAfgbI1hpVX"  target="_blank" rel="noopener"
+    >Khóa học JavaScript - Kteam</a>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/N2QqCxjz-hY" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+</p>
+<hr>
+<h2 id="1-toán-tử-số-học">1. Toán tử số học
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>);    <span style="color:#75715e">// 13 - Cộng
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">b</span>);    <span style="color:#75715e">// 7  - Trừ
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">b</span>);    <span style="color:#75715e">// 30 - Nhân
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">/</span> <span style="color:#a6e22e">b</span>);    <span style="color:#75715e">// 3.33 - Chia
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">%</span> <span style="color:#a6e22e">b</span>);    <span style="color:#75715e">// 1  - Chia lấy dư
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">**</span> <span style="color:#a6e22e">b</span>);   <span style="color:#75715e">// 1000 - Lũy thừa
+</span></span></span></code></pre></div><h3 id="toán-tử-tănggiảm">Toán tử tăng/giảm:
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>);  <span style="color:#75715e">// 5 (dùng trước, tăng sau)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#f92672">++</span><span style="color:#a6e22e">count</span>);  <span style="color:#75715e">// 7 (tăng trước, dùng sau)
+</span></span></span></code></pre></div><h2 id="2-toán-tử-gán">2. Toán tử gán
+</h2><h3 id="gán-cơ-bản">Gán cơ bản:
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isActive</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span></code></pre></div><h3 id="toán-tử-gán-kết-hợp">Toán tử gán kết hợp:
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">score</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">50</span>;   <span style="color:#75715e">// score = score + 50
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">score</span> <span style="color:#f92672">-=</span> <span style="color:#ae81ff">30</span>;   <span style="color:#75715e">// score = score - 30
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">score</span> <span style="color:#f92672">*=</span> <span style="color:#ae81ff">2</span>;    <span style="color:#75715e">// score = score * 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">score</span> <span style="color:#f92672">/=</span> <span style="color:#ae81ff">4</span>;    <span style="color:#75715e">// score = score / 4
+</span></span></span></code></pre></div><h2 id="3-toán-tử-so-sánh">3. Toán tử so sánh
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;5&#34;</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// So sánh giá trị
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">b</span>);   <span style="color:#75715e">// true (5 == &#34;5&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">b</span>);  <span style="color:#75715e">// false (khác kiểu)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">!=</span> <span style="color:#a6e22e">b</span>);   <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">!==</span> <span style="color:#a6e22e">b</span>);  <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// So sánh lớn hơn, nhỏ hơn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">c</span>);    <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">c</span>);    <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">5</span>);   <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">10</span>);  <span style="color:#75715e">// true
+</span></span></span></code></pre></div><h2 id="4-sự-khác-biệt--vs-">4. Sự khác biệt <code>==</code> vs <code>===</code>
+</h2><h3 id="-loose-equality"><code>==</code> (Loose Equality):
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;5&#34;</span>);     <span style="color:#75715e">// true (tự động chuyển đổi kiểu)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">true</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>);    <span style="color:#75715e">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>);      <span style="color:#75715e">// true
+</span></span></span></code></pre></div><h3 id="-strict-equality---khuyên-dùng"><code>===</code> (Strict Equality) - Khuyên dùng:
+</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;5&#34;</span>);    <span style="color:#75715e">// false (khác kiểu)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">true</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">1</span>);   <span style="color:#75715e">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">===</span> <span style="color:#ae81ff">0</span>);     <span style="color:#75715e">// false
+</span></span></span></code></pre></div><h2 id="5-thứ-tự-ưu-tiên-toán-tử">5. Thứ tự ưu tiên toán tử
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>;    <span style="color:#75715e">// 14 (không phải 20)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">result2</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>; <span style="color:#75715e">// 20 (có dấu ngoặc)
+</span></span></span></code></pre></div><p><strong>Thứ tự ưu tiên:</strong> <code>()</code> → <code>**</code> → <code>*</code>, <code>/</code>, <code>%</code> → <code>+</code>, <code>-</code> → so sánh → <code>===</code> → gán</p>
+<h2 id="6-bài-tập-nhỏ">6. Bài tập nhỏ
+</h2><p>Tính toán hóa đơn:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">PRICE</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">500000</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">quantity</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">discount</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>; <span style="color:#75715e">// %
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">subtotal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">PRICE</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">quantity</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">discountAmount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">subtotal</span> <span style="color:#f92672">*</span> (<span style="color:#a6e22e">discount</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">total</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">subtotal</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">discountAmount</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tạm tính:&#34;</span>, <span style="color:#a6e22e">subtotal</span>, <span style="color:#e6db74">&#34;VND&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Giảm giá:&#34;</span>, <span style="color:#a6e22e">discountAmount</span>, <span style="color:#e6db74">&#34;VND&#34;</span>);  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Tổng cộng:&#34;</span>, <span style="color:#a6e22e">total</span>, <span style="color:#e6db74">&#34;VND&#34;</span>);
+</span></span></code></pre></div><h2 id="chốt-lại">Chốt lại:
+</h2><p>Bài 5 giúp bạn hiểu các toán tử số học (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code>), toán tử gán (<code>=</code>, <code>+=</code>, <code>-=</code>), toán tử so sánh (<code>===</code>, <code>!==</code>, <code>&gt;</code>, <code>&lt;</code>), sự khác biệt giữa <code>==</code> và <code>===</code>, và thứ tự ưu tiên toán tử trong JavaScript.</p>
+<hr>
+<h3 id="-bài-tiếp-theo">📚 Bài tiếp theo
+</h3><p>👉 <a class="link" href="/MyPortfolio/p/bai-6-kieu-du-lieu-number/" ><strong>Bài 6: Kiểu dữ liệu số Number</strong></a> - Tìm hiểu chi tiết về số trong JavaScript!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Woong Ho Tuan Nguyen
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/MyPortfolio/ts/main.ca076315cf519b77eb1a70af285ed4d187a65a2cc2f65d161aa765482813a62c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

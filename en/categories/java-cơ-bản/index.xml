@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Java Cơ Bản on Woong Ho Tuan Nguyen</title>
+        <link>http://localhost:1313/MyPortfolio/en/categories/java-c%C6%A1-b%E1%BA%A3n/</link>
+        <description>Recent content in Java Cơ Bản on Woong Ho Tuan Nguyen</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <managingEditor>nguyenwoong20@gmail.com (Nguyen)</managingEditor>
+        <webMaster>nguyenwoong20@gmail.com (Nguyen)</webMaster>
+        <lastBuildDate>Mon, 22 Sep 2025 13:00:00 +0700</lastBuildDate><atom:link href="http://localhost:1313/MyPortfolio/en/categories/java-c%C6%A1-b%E1%BA%A3n/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Bài 9 - String Bất Biến (Immutable) trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-9-string-b%E1%BA%A5t-bi%E1%BA%BFn-immutable-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 13:00:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-9-string-b%E1%BA%A5t-bi%E1%BA%BFn-immutable-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/AQzJAA994OE/maxresdefault.jpg" alt="Featured image of post Bài 9 - String Bất Biến (Immutable) trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/AQzJAA994OE&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-string-là-immutable---bất-biến&#34;&gt;1) String là immutable - bất biến
+&lt;/h2&gt;&lt;p&gt;String trong Java là bất biến (immutable) - nghĩa là không thể thay đổi sau khi tạo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String s1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;s1.&lt;span style=&#34;color:#a6e22e&#34;&gt;concat&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; World&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Tạo string mới nhưng không gán lại&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(s1); &lt;span style=&#34;color:#75715e&#34;&gt;// Vẫn in &amp;#34;Hello&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Phải gán kết quả vào biến mới&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String s2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; s1.&lt;span style=&#34;color:#a6e22e&#34;&gt;concat&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; World&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(s2); &lt;span style=&#34;color:#75715e&#34;&gt;// In &amp;#34;Hello World&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-string-pool&#34;&gt;2) String Pool
+&lt;/h2&gt;&lt;p&gt;Java sử dụng String Pool để tối ưu bộ nhớ, tái sử dụng string giống nhau.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String str1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String str2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;; &lt;span style=&#34;color:#75715e&#34;&gt;// Trỏ cùng về 1 vị trí trong pool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(str1 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; str2); &lt;span style=&#34;color:#75715e&#34;&gt;// true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String str3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; String(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Tạo đối tượng mới&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(str1 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; str3); &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-so-sánh-string-đúng-cách&#34;&gt;3) So sánh String đúng cách
+&lt;/h2&gt;&lt;p&gt;Do cơ chế String Pool, không nên dùng == để so sánh String.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Code&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; String(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Code&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; b);         &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a.&lt;span style=&#34;color:#a6e22e&#34;&gt;equals&lt;/span&gt;(b));    &lt;span style=&#34;color:#75715e&#34;&gt;// true - cách đúng&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-hiệu-suất-với-string&#34;&gt;4) Hiệu suất với String
+&lt;/h2&gt;&lt;p&gt;Khi cần nối nhiều String, dùng StringBuilder thay vì toán tử +.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Không hiệu quả&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 1000; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    result &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; i; &lt;span style=&#34;color:#75715e&#34;&gt;// Tạo nhiều đối tượng String mới&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Hiệu quả hơn&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;StringBuilder sb &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; StringBuilder();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 1000; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sb.&lt;span style=&#34;color:#a6e22e&#34;&gt;append&lt;/span&gt;(i); &lt;span style=&#34;color:#75715e&#34;&gt;// Thay đổi trực tiếp nội dung&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sb.&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-kết-luận--cảm-nhận&#34;&gt;5) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;String bất biến giúp code an toàn hơn, tránh thay đổi nội dung không mong muốn&lt;/li&gt;
+&lt;li&gt;Hiểu về String Pool giúp tối ưu bộ nhớ và viết code so sánh chính xác&lt;/li&gt;
+&lt;li&gt;StringBuilder là giải pháp hiệu quả khi cần thao tác String nhiều lần&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-constructor-nâng-cao-trong-java&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_constructor_advanced/&#34; &gt;Constructor nâng cao trong Java&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 8 - Enum và Wrapper Class trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-8-enum-v%C3%A0-wrapper-class-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 12:30:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-8-enum-v%C3%A0-wrapper-class-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/vKvBz238wfg/maxresdefault.jpg" alt="Featured image of post Bài 8 - Enum và Wrapper Class trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/vKvBz238wfg&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-enum-là-gì&#34;&gt;1) Enum là gì?
+&lt;/h2&gt;&lt;p&gt;Enum là kiểu dữ liệu liệt kê, chứa các hằng số cố định, thường dùng đại diện nhóm giá trị ràng buộc.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;enum&lt;/span&gt; Day { MON, TUE, WED, THU, FRI, SAT, SUN }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Day today &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Day.&lt;span style=&#34;color:#a6e22e&#34;&gt;SAT&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(today); &lt;span style=&#34;color:#75715e&#34;&gt;// SAT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Duyệt enum:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (Day d : Day.&lt;span style=&#34;color:#a6e22e&#34;&gt;values&lt;/span&gt;()) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(d);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-wrapper-class&#34;&gt;2) Wrapper Class
+&lt;/h2&gt;&lt;p&gt;Lớp bao (Wrapper) như Integer, Double, Boolean&amp;hellip; giúp dùng các kiểu dữ liệu nguyên thủy như đối tượng.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 5;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Integer xx &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(xx.&lt;span style=&#34;color:#a6e22e&#34;&gt;compareTo&lt;/span&gt;(8)); &lt;span style=&#34;color:#75715e&#34;&gt;// -1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dùng Wrapper khi làm việc với collections/ArrayList (chỉ nhận object).&lt;/p&gt;
+&lt;h2 id=&#34;3-khi-nào-dùng-enum-wrapper&#34;&gt;3) Khi nào dùng Enum, Wrapper?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Enum: dùng cho nhóm giá trị giới hạn (trạng thái, ngày trong tuần, loại đơn hàng&amp;hellip;).&lt;/li&gt;
+&lt;li&gt;Wrapper: cần tính năng object với giá trị số/nguyên thủy, truyền qua API/library.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-kết-luận--cảm-nhận&#34;&gt;4) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Video Code Thủ giúp mình hiểu, tận dụng enum cho code rõ ràng, giảm bug vì giá trị sai lệch.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wrapper class cực kỳ hữu ích khi thao tác collection, sử dụng phương thức tiện ích của lớp đối tượng.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-9--exception-handling&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai9/&#34; &gt;Bài 9 – Exception Handling&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 7 - HashMap, Set và HashSet trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-7-hashmap-set-v%C3%A0-hashset-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 12:00:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-7-hashmap-set-v%C3%A0-hashset-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/TEDZbOH0Y0o/maxresdefault.jpg" alt="Featured image of post Bài 7 - HashMap, Set và HashSet trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/TEDZbOH0Y0o&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-hashmap--lưu-trữ-dạng-ánh-xạ-keyvalue&#34;&gt;1) HashMap – Lưu trữ dạng ánh xạ (key/value)
+&lt;/h2&gt;&lt;p&gt;Cấu trúc lưu dữ liệu dạng cặp khóa (key) – giá trị (value), cho phép tra cứu nhanh dựa trên key.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.HashMap;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;HashMap&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String, Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; map &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; HashMap&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;map.&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;, 18);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;map.&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nam&amp;#34;&lt;/span&gt;, 20);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(map.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// 18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-set-và-hashset--tập-hợp-không-trùng-lặp&#34;&gt;2) Set và HashSet – Tập hợp không trùng lặp
+&lt;/h2&gt;&lt;p&gt;Set không cho phép phần tử lặp lại, xếp theo thứ tự phụ thuộc vào triển khai (HashSet mất thứ tự).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.HashSet;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;HashSet&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; set &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; HashSet&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Code Thủ&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// không thêm lại!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(set.&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;()); &lt;span style=&#34;color:#75715e&#34;&gt;// 2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-khi-nào-dùng-map-hashset&#34;&gt;3) Khi nào dùng Map, HashSet?
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;HashMap dùng khi cần tra cứu theo khóa.&lt;/li&gt;
+&lt;li&gt;Set dùng khi muốn loại bỏ dữ liệu trùng.&lt;/li&gt;
+&lt;li&gt;Kết hợp lọc dữ liệu với tập hợp lớn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4-kết-luận--cảm-nhận&#34;&gt;4) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Nhờ video Code Thủ, mình làm chủ cách chọn cấu trúc lưu trữ phù hợp, tiết kiệm thời gian dựng thuật toán xử lý dữ liệu lớn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lưu ý: Khi thao tác với Map/Set nên thử in ra nhiều trường hợp edge case!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-8--enum-và-wrapper-class&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai8_enum/&#34; &gt;Bài 8 – Enum và Wrapper Class&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 6 - Mảng (Array) và ArrayList trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-6-m%E1%BA%A3ng-array-v%C3%A0-arraylist-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 11:30:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-6-m%E1%BA%A3ng-array-v%C3%A0-arraylist-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/uzZ8rwgkPqU/maxresdefault.jpg" alt="Featured image of post Bài 6 - Mảng (Array) và ArrayList trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/uzZ8rwgkPqU&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-mảng-array-là-gì&#34;&gt;1) Mảng (Array) là gì?
+&lt;/h2&gt;&lt;p&gt;Mảng lưu nhiều giá trị cùng kiểu, truy xuất bằng chỉ số.&lt;/p&gt;
+&lt;p&gt;Số phần tử mảng được cố định khi khởi tạo.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; nums &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;0&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 10;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 20;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 30;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// 20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Khởi tạo nhanh:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bình&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chi&amp;#34;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-duyệt-mảng&#34;&gt;2) Duyệt mảng
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; nums.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-giới-thiệu-arraylist&#34;&gt;3) Giới thiệu ArrayList
+&lt;/h2&gt;&lt;p&gt;Kết cấu động (co giãn tự động, có thể thêm/xóa phần tử linh hoạt).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.ArrayList;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;list.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Code Thủ&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(list.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(1)); &lt;span style=&#34;color:#75715e&#34;&gt;// Code Thủ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Duyệt ArrayList:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (String item : list) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(item);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-so-sánh-array-vs-arraylist&#34;&gt;4) So sánh array vs ArrayList
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Tiêu chí&lt;/th&gt;
+          &lt;th&gt;Array&lt;/th&gt;
+          &lt;th&gt;ArrayList&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Kích thước&lt;/td&gt;
+          &lt;td&gt;Cố định&lt;/td&gt;
+          &lt;td&gt;Linh hoạt&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Kiểu dữ liệu&lt;/td&gt;
+          &lt;td&gt;Phải xác định cụ thể&lt;/td&gt;
+          &lt;td&gt;Có thể dùng object&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Tăng/giảm&lt;/td&gt;
+          &lt;td&gt;Không&lt;/td&gt;
+          &lt;td&gt;Dùng add/remove&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;5-kết-luận--cảm-nhận&#34;&gt;5) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Video Code Thủ giúp mình biết chọn mảng khi dữ liệu cố định trước, dùng ArrayList khi cần mở rộng.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Biết kết hợp duyệt mảng, thao tác cơ bản sẽ cực kỳ thuận lợi cho các bài toán lớn hơn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-7--hashmap--set&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai7_mapset/&#34; &gt;Bài 7 – HashMap &amp;amp; Set&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 5 - Câu điều kiện (if-else) và Vòng lặp trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-5-c%C3%A2u-%C4%91i%E1%BB%81u-ki%E1%BB%87n-if-else-v%C3%A0-v%C3%B2ng-l%E1%BA%B7p-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 11:00:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-5-c%C3%A2u-%C4%91i%E1%BB%81u-ki%E1%BB%87n-if-else-v%C3%A0-v%C3%B2ng-l%E1%BA%B7p-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/u4kJ-pUKaiQ/maxresdefault.jpg" alt="Featured image of post Bài 5 - Câu điều kiện (if-else) và Vòng lặp trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/u4kJ-pUKaiQ&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-câu-lệnh-điều-kiện-if-else&#34;&gt;1) Câu lệnh điều kiện if-else
+&lt;/h2&gt;&lt;p&gt;Dùng để kiểm tra điều kiện, phân nhánh logic chương trình.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 19;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (age &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 18) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bạn đủ tuổi!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bạn chưa đủ tuổi.&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-vòng-lặp-while&#34;&gt;2) Vòng lặp While
+&lt;/h2&gt;&lt;p&gt;Dùng lặp khi chưa biết trước số lần lặp, lặp khi điều kiện còn đúng.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 5) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;i = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; i);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-vòng-lặp-for&#34;&gt;3) Vòng lặp For
+&lt;/h2&gt;&lt;p&gt;Dùng lặp biết trước số lần, cấu trúc gồm khởi tạo, điều kiện, bước nhảy.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; j &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; 3; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;j = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; j);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-kết-hợp-điều-kiện-và-vòng-lặp&#34;&gt;4) Kết hợp điều kiện và vòng lặp
+&lt;/h2&gt;&lt;p&gt;Ứng dụng kiểm tra số chẵn/lẻ, tổng dãy số, lọc dữ liệu, &amp;hellip;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; k &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 10; k&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (k &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(k &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; là số chẵn&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-lời-khuyên--cảm-nhận&#34;&gt;5) Lời khuyên &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Nhờ video Code Thủ, mình hiểu rõ từng loại vòng lặp, điều kiện và biết áp dụng chọn đúng tình huống giúp mã nguồn ngắn gọn, hiệu quả.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Khi học thao tác vòng lặp, đừng quên điều kiện dừng để tránh lỗi infinite loop!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-6--mảng--arraylist&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai6_array/&#34; &gt;Bài 6 – Mảng &amp;amp; ArrayList&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 4 - Lớp (Class) và Constructor trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-4-l%E1%BB%9Bp-class-v%C3%A0-constructor-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 10:30:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-4-l%E1%BB%9Bp-class-v%C3%A0-constructor-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/n33H9XSXRxc/maxresdefault.jpg" alt="Featured image of post Bài 4 - Lớp (Class) và Constructor trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/n33H9XSXRxc&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-khái-niệm-class-trong-java&#34;&gt;1) Khái niệm Class trong Java
+&lt;/h2&gt;&lt;p&gt;Class là bản thiết kế cho đối tượng – mô tả thuộc tính (biến) và hành động (phương thức) chung cho một loại sự vật.&lt;/p&gt;
+&lt;p&gt;Khi tạo object (đối tượng) từ class, ta sử dụng bản thiết kế này để sinh ra thực thể thật dùng trong chương trình.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;introduce&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(name &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; - &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; age);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Student s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Student();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;s.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;An&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;s.&lt;span style=&#34;color:#a6e22e&#34;&gt;age&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 20;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;s.&lt;span style=&#34;color:#a6e22e&#34;&gt;introduce&lt;/span&gt;(); &lt;span style=&#34;color:#75715e&#34;&gt;// In: An - 20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-constructor-hàm-tạo-là-gì&#34;&gt;2) Constructor (Hàm tạo) là gì?
+&lt;/h2&gt;&lt;p&gt;Constructor là một phương thức đặc biệt dùng để khởi tạo đối tượng từ class.&lt;/p&gt;
+&lt;p&gt;Tên constructor trùng tên class, không có kiểu trả về, gọi tự động khi dùng từ khóa new.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt;(String studentName) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; studentName;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Student sv &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Student(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nam&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(sv.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt;); &lt;span style=&#34;color:#75715e&#34;&gt;// Nam&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-default-constructor--overloading&#34;&gt;3) Default Constructor &amp;amp; Overloading
+&lt;/h2&gt;&lt;p&gt;Nếu bạn không tạo constructor, Java tự thêm constructor mặc định (không nhận tham số).&lt;/p&gt;
+&lt;p&gt;Có thể tạo nhiều constructor với tham số khác nhau (constructor overloading).&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    String name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; age;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;No Name&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt;(String n, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Student s1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Student();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Student s2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Student(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Long&amp;#34;&lt;/span&gt;, 22);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-khái-niệm-this&#34;&gt;4) Khái niệm THIS
+&lt;/h2&gt;&lt;p&gt;Từ khóa this đại diện cho đối tượng hiện tại, dùng để phân biệt biến thành phần và tham số trong constructor hoặc phương thức.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Student&lt;/span&gt;(String name) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;name&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; name;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-kết-luận--cảm-nhận&#34;&gt;5) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Xem video của Code Thủ giúp mình hiểu gốc rễ về cách tạo/làm việc với class, sử dụng constructor linh hoạt và phân biệt rõ giữa biến thành phần - biến cục bộ.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Class, constructor và kỹ năng dùng this chuẩn xác là chìa khoá lập trình OOP Java hiệu quả.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-5--điều-kiện--vòng-lặp&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai5_control/&#34; &gt;Bài 5 – Điều kiện &amp;amp; vòng lặp&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 3 - Làm chủ String trong Java</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-3-l%C3%A0m-ch%E1%BB%A7-string-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 10:00:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-3-l%C3%A0m-ch%E1%BB%A7-string-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/14MHZ23g0eI/maxresdefault.jpg" alt="Featured image of post Bài 3 - Làm chủ String trong Java" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/14MHZ23g0eI&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-string-là-gì&#34;&gt;1) String là gì?
+&lt;/h2&gt;&lt;p&gt;String là một kiểu tham chiếu (class) trong Java, dùng lưu chuỗi ký tự (text).&lt;/p&gt;
+&lt;p&gt;Bất cứ thứ gì nằm giữa cặp dấu ngoặc kép (&amp;quot;&amp;quot;) đều là String.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String msg &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello Code Thủ&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-tính-bất-biến-immutable&#34;&gt;2) Tính bất biến (immutable)
+&lt;/h2&gt;&lt;p&gt;String trong Java bất biến: Khi thay đổi giá trị, đối tượng mới được tạo, giá trị cũ không bị thay đổi.&lt;/p&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String s1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String s2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; s1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;s1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(s2); &lt;span style=&#34;color:#75715e&#34;&gt;// vẫn in &amp;#34;Java&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-các-thao-tác-phổ-biến-với-string&#34;&gt;3) Các thao tác phổ biến với String
+&lt;/h2&gt;&lt;p&gt;Nối chuỗi (sử dụng toán tử +):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String s &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Code Thủ&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(s); &lt;span style=&#34;color:#75715e&#34;&gt;// Hello Code Thủ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nối chuỗi với biến/giá trị:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 123;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Code Thủ &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; number); &lt;span style=&#34;color:#75715e&#34;&gt;// Code Thủ 123&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-một-số-phương-thức-hữu-ích&#34;&gt;4) Một số phương thức hữu ích
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.length()&lt;/code&gt;: Độ dài chuỗi.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.toUpperCase()&lt;/code&gt;, &lt;code&gt;.toLowerCase()&lt;/code&gt;: Chuyển chuỗi sang chữ hoa/thường.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.indexOf()&lt;/code&gt;: Vị trí đầu tiên tìm thấy ký tự/chuỗi con, -1 nếu không có.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.replace(old, new)&lt;/code&gt;: Thay thế tất cả ký tự/chuỗi con phù hợp bằng chuỗi khác.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.trim()&lt;/code&gt;: Loại bỏ khoảng trắng đầu/cuối chuỗi.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.isEmpty()&lt;/code&gt;: Kiểm tra chuỗi có rỗng không.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;  Code Thủ  &amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(name.&lt;span style=&#34;color:#a6e22e&#34;&gt;trim&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;toUpperCase&lt;/span&gt;()); &lt;span style=&#34;color:#75715e&#34;&gt;// CODE THỦ&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-so-sánh-string&#34;&gt;5) So sánh String
+&lt;/h2&gt;&lt;p&gt;Quan trọng: Không so sánh giá trị chuỗi bằng hai dấu == mà phải dùng &lt;code&gt;.equals()&lt;/code&gt; hoặc &lt;code&gt;.equalsIgnoreCase()&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Java&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;String b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JAVA&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a.&lt;span style=&#34;color:#a6e22e&#34;&gt;equals&lt;/span&gt;(b));          &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a.&lt;span style=&#34;color:#a6e22e&#34;&gt;equalsIgnoreCase&lt;/span&gt;(b)); &lt;span style=&#34;color:#75715e&#34;&gt;// true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;6-kết-luận--cảm-nhận&#34;&gt;6) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Video Code Thủ giúp mình hiểu sâu về bản chất &amp;ldquo;bất biến&amp;rdquo; của chuỗi, thao tác nối/chỉnh sửa, so sánh chuẩn không lỗi logic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Biết cách dùng method hữu ích của String giúp làm việc nhanh hơn và tránh bug khó đoán lúc kiểm tra điều kiện hoặc nhập xuất.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-4--array--list&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai4/&#34; &gt;Bài 4 – Array &amp;amp; List&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 2 - Boolean - Cái Đúng Cái Sai trong JAVA</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-2-boolean-c%C3%A1i-%C4%91%C3%BAng-c%C3%A1i-sai-trong-java/</link>
+        <pubDate>Mon, 22 Sep 2025 09:30:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-2-boolean-c%C3%A1i-%C4%91%C3%BAng-c%C3%A1i-sai-trong-java/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/iscik6EOcMo/maxresdefault.jpg" alt="Featured image of post Bài 2 - Boolean - Cái Đúng Cái Sai trong JAVA" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/iscik6EOcMo&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-kiểu-dữ-liệu-boolean&#34;&gt;1. Kiểu dữ liệu boolean
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;boolean&lt;/strong&gt; là kiểu dữ liệu cơ bản trong Java&lt;/li&gt;
+&lt;li&gt;Chỉ có 2 giá trị: &lt;strong&gt;true&lt;/strong&gt; hoặc &lt;strong&gt;false&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Dùng để lưu trữ điều kiện đúng/sai&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isJavaFun &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isBoring &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-các-phép-toán-logic&#34;&gt;2. Các phép toán logic
+&lt;/h2&gt;&lt;h3 id=&#34;phép-and-&#34;&gt;Phép AND (&amp;amp;&amp;amp;)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Trả về true khi cả 2 đều true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; b); &lt;span style=&#34;color:#75715e&#34;&gt;// true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; b); &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;phép-or-&#34;&gt;Phép OR (||)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Trả về true khi có ít nhất 1 true&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; y); &lt;span style=&#34;color:#75715e&#34;&gt;// true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; y); &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;phép-not-&#34;&gt;Phép NOT (!)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Đảo ngược giá trị boolean&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; done &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;!&lt;/span&gt;done); &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-so-sánh-bằng--và-khác-&#34;&gt;3. So sánh bằng (==) và khác (!=)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 5;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 5;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isEqual &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (num1 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; num2); &lt;span style=&#34;color:#75715e&#34;&gt;// true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isNotEqual &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (num1 &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; num2); &lt;span style=&#34;color:#75715e&#34;&gt;// false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-ứng-dụng-trong-câu-điều-kiện-if&#34;&gt;4. Ứng dụng trong câu điều kiện if
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isRaining &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (isRaining) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Mang ô đi!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Thời tiết đẹp!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-một-số-ví-dụ-thực-tế&#34;&gt;5. Một số ví dụ thực tế
+&lt;/h2&gt;&lt;h3 id=&#34;kiểm-tra-số-chẵn-lẻ&#34;&gt;Kiểm tra số chẵn lẻ
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 10;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isEven &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (number &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; là số chẵn: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; isEven);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;kiểm-tra-tuổi-hợp-lệ&#34;&gt;Kiểm tra tuổi hợp lệ
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; age &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 20;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isAdult &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; age &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 18;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Đủ tuổi trưởng thành: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; isAdult);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;6-lưu-ý-quan-trọng&#34;&gt;6. Lưu ý quan trọng
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Không dùng số 1/0 thay cho true/false&lt;/li&gt;
+&lt;li&gt;boolean giúp code dễ đọc, dễ hiểu&lt;/li&gt;
+&lt;li&gt;Nên đặt tên biến boolean bắt đầu bằng is/has/can&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-3--biến-số&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai3/&#34; &gt;Bài 3 – Biến số&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Bài 1 - Giới thiệu Java &amp; môi trường lập trình (Hello World)</title>
+        <link>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-1-gi%E1%BB%9Bi-thi%E1%BB%87u-java-m%C3%B4i-tr%C6%B0%E1%BB%9Dng-l%E1%BA%ADp-tr%C3%ACnh-hello-world/</link>
+        <pubDate>Mon, 22 Sep 2025 09:00:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-1-gi%E1%BB%9Bi-thi%E1%BB%87u-java-m%C3%B4i-tr%C6%B0%E1%BB%9Dng-l%E1%BA%ADp-tr%C3%ACnh-hello-world/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/uWdaOoMgFvs/maxresdefault.jpg" alt="Featured image of post Bài 1 - Giới thiệu Java &amp; môi trường lập trình (Hello World)" /&gt;&lt;h2 id=&#34;-video-minh-họa-nguồn-ytb-code-thu&#34;&gt;🎥 Video minh họa nguồn: YTB Code Thu
+&lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/uWdaOoMgFvs&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;1-chuẩn-bị-môi-trường-java&#34;&gt;1) Chuẩn bị môi trường Java
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tải về &lt;strong&gt;JDK&lt;/strong&gt; (khuyên dùng Temurin hoặc Oracle JDK).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cài đặt xong, kiểm tra trên terminal/cmd:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java -version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;javac -version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Thiết lập biến môi trường JAVA_HOME nếu cần cho dự án/IDE.&lt;/p&gt;
+&lt;h2 id=&#34;2-cài-đặt-ide-chuyên-dụng&#34;&gt;2) Cài đặt IDE chuyên dụng
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;IntelliJ IDEA Community Edition (Code Thủ hướng dẫn thao tác siêu nhanh)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hoặc VS Code (cài Java Extension Pack)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IDE miễn phí, dễ thao tác cho người mới.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-tạo-project--file-đầu-tiên-hello-world&#34;&gt;3) Tạo Project &amp;amp; file đầu tiên (Hello World)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Trong IntelliJ: File &amp;gt; New &amp;gt; Project, chọn Java, rồi tạo file Hello.java trong thư mục src.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cấu trúc dự án đơn giản:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ProjectRoot/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;└── src/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    └── Hello.java
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-viết-chương-trình-đầu-tiên&#34;&gt;4) Viết chương trình đầu tiên
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;public class Hello &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    public static void main&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        System.out.println&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, Java!&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Build và chạy bằng nút Run trên IDE, hoặc dùng dòng lệnh:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;javac Hello.java
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;java Hello
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Màn hình in ra:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Hello, Java!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-kết-luận--cảm-nhận&#34;&gt;5) Kết luận &amp;amp; cảm nhận
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sau khi xem video của Code Thủ, mình cài đặt Java, thiết lập IDE và chạy chương trình đầu tiên cực kỳ nhanh, y như hướng dẫn!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Việc xây dựng dự án Java và chạy mã nguồn đơn giản giúp mình tự tin bắt đầu học các phần tiếp theo.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tiếp-theo-bài-2--boolean&#34;&gt;Tiếp theo: &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/MyPortfolio/p/java_bai2_boolean/&#34; &gt;Bài 2 – boolean&lt;/a&gt;
+&lt;/h2&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

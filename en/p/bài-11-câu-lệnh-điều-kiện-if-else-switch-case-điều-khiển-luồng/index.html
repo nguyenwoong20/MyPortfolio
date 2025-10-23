@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/MyPortfolio/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=MyPortfolio/livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Học cách sử dụng if-else và switch-case để điều khiển luồng chương trình trong JavaScript">
+<title>Bài 11 - Câu Lệnh Điều Kiện if-else, switch-case - Điều Khiển Luồng</title>
+
+<link rel='canonical' href='http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-11-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n-if-else-switch-case-%C4%91i%E1%BB%81u-khi%E1%BB%83n-lu%E1%BB%93ng/'>
+
+<link rel="stylesheet" href="/MyPortfolio/scss/style.min.f003128b339074b61f84179a67886241203a284fe629cf560a738707942bafa6.css"><meta property='og:title' content="Bài 11 - Câu Lệnh Điều Kiện if-else, switch-case - Điều Khiển Luồng">
+<meta property='og:description' content="Học cách sử dụng if-else và switch-case để điều khiển luồng chương trình trong JavaScript">
+<meta property='og:url' content='http://localhost:1313/MyPortfolio/en/p/b%C3%A0i-11-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n-if-else-switch-case-%C4%91i%E1%BB%81u-khi%E1%BB%83n-lu%E1%BB%93ng/'>
+<meta property='og:site_name' content='Woong Ho Tuan Nguyen'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='javascript-basic' /><meta property='article:tag' content='if-else' /><meta property='article:tag' content='switch-case' /><meta property='article:tag' content='control-flow' /><meta property='article:published_time' content='2025-09-28T14:00:00&#43;07:00'/><meta property='article:modified_time' content='2025-09-28T14:00:00&#43;07:00'/><meta property='og:image' content='https://img.youtube.com/vi/g6AVmwqtnyw/maxresdefault.jpg' />
+<meta name="twitter:title" content="Bài 11 - Câu Lệnh Điều Kiện if-else, switch-case - Điều Khiển Luồng">
+<meta name="twitter:description" content="Học cách sử dụng if-else và switch-case để điều khiển luồng chương trình trong JavaScript"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://img.youtube.com/vi/g6AVmwqtnyw/maxresdefault.jpg' />
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,vi',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/MyPortfolio/en/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/MyPortfolio/img/avatar2_hu_24af44b6bccc68f9.png" width="300"
+                            height="411" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/MyPortfolio/en">Woong Ho Tuan Nguyen</a></h1>
+            <h2 class="site-description">@nguyenwoong20</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/nguyenwoong20'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/nguyen-woong-3961a8389/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:nguyenwoong20@gmail.com'
+                        target="_blank"
+                        title="Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/MyPortfolio/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/post/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+  <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+</svg>
+
+
+
+                
+                <span>Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/MyPortfolio/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                
+                
+                    <li id="i18n-switch">
+                        
+
+    
+    <div class="lang-switcher">
+        
+        
+            
+            
+                
+                    
+                        
+                            <a href="http://localhost:1313/MyPortfolio/vi/" class="lang-button" title="Switch to Vietnamese">
+                                <span class="flag">🇻🇳</span>
+                                <span class="lang-code">VI</span>
+                            </a>
+                        
+                    
+                
+            
+        
+    </div>
+
+
+                    </li>
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/MyPortfolio/en/p/b%C3%A0i-11-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n-if-else-switch-case-%C4%91i%E1%BB%81u-khi%E1%BB%83n-lu%E1%BB%93ng/">
+                
+                    <img src="https://img.youtube.com/vi/g6AVmwqtnyw/maxresdefault.jpg" loading="lazy" alt="">
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/MyPortfolio/en/p/b%C3%A0i-11-c%C3%A2u-l%E1%BB%87nh-%C4%91i%E1%BB%81u-ki%E1%BB%87n-if-else-switch-case-%C4%91i%E1%BB%81u-khi%E1%BB%83n-lu%E1%BB%93ng/">Bài 11 - Câu Lệnh Điều Kiện if-else, switch-case - Điều Khiển Luồng</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    <header class="article-category">
+        
+            <a href="/MyPortfolio/en/categories/javascript-series/" class="article-category-link">
+                JavaScript Series
+            </a>
+        
+            <a href="/MyPortfolio/en/categories/javascript-c%C6%A1-b%E1%BA%A3n/" class="article-category-link">
+                JavaScript Cơ Bản
+            </a>
+        
+    </header>
+    
+
+    
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 28, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+</div>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="-video-hướng-dẫn-chi-tiết">🎥 Video hướng dẫn chi tiết
+</h2><p><strong>Nguồn:</strong> <a class="link" href="https://www.youtube.com/playlist?list=PL33lvabfss1ywJRoh40x9fmAfgbI1hpVX"  target="_blank" rel="noopener"
+    >Khóa học JavaScript - Kteam</a>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/g6AVmwqtnyw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+</p>
+<hr>
+<h2 id="1-câu-lệnh-if">1. Câu lệnh if
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">18</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// If đơn giản
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Đủ tuổi!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// If với điều kiện phức tạp
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">hasLicense</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">hasLicense</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Có thể lái xe!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="2-if-else-statement">2. if-else statement
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">75</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Xuất sắc - A&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Giỏi - B&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Khá - C&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">60</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Trung bình - D&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Yếu - F&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Phân loại thời gian
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">time</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">14</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">time</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">6</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Đêm khuya&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">time</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">12</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Buổi sáng&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">time</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Buổi chiều&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Buổi tối&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="3-switch-case-statement">3. switch-case statement
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">dayOfWeek</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">dayOfWeek</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Thứ hai&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Thứ ba&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Thứ tư&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Ngày khác&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Fall-through behavior
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">month</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">month</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">12</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Mùa đông&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Mùa xuân&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Mùa khác&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Switch với string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">userRole</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;admin&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">userRole</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;admin&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Quyền: Quản trị hệ thống&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#34;editor&#34;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Quyền: Biên tập nội dung&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Quyền: Không xác định&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="4-ternary-operator">4. Ternary Operator
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Cú pháp: condition ? valueIfTrue : valueIfFalse
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;Người lớn&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Trẻ em&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>); <span style="color:#75715e">// &#34;Người lớn&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Nested ternary
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">85</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">grade</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">90</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;A&#34;</span> <span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">80</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;B&#34;</span> <span style="color:#f92672">:</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">score</span> <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">70</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;C&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;D&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Trong template literals
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;John&#34;</span>, <span style="color:#a6e22e">isOnline</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">isOnline</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#39;online&#39;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;offline&#39;</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">status</span>); <span style="color:#75715e">// &#34;John online&#34;
+</span></span></span></code></pre></div><h2 id="chốt-lại">Chốt lại
+</h2><ol>
+<li><strong>if-else</strong>: Kiểm tra điều kiện true/false, dùng <code>if-else if-else</code> cho nhiều điều kiện</li>
+<li><strong>switch-case</strong>: So sánh giá trị với nhiều trường hợp, nhớ <code>break</code> để tránh fall-through</li>
+<li><strong>Ternary operator</strong>: <code>condition ? true : false</code> - ngắn gọn cho điều kiện đơn giản</li>
+<li><strong>Best practices</strong>: Dùng <code>===</code> thay vì <code>==</code>, luôn dùng <code>{}</code> cho block statement</li>
+<li><strong>Validation</strong>: Kiểm tra input trước khi xử lý để tránh lỗi runtime</li>
+</ol>
+<hr>
+<h3 id="-bài-tiếp-theo">📚 Bài tiếp theo
+</h3><p>👉 <a class="link" href="../bai-12-vong-lap-while/" ><strong>Bài 12: Vòng lặp While</strong></a> - Học cách tạo vòng lặp với while và do-while!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/MyPortfolio/en/tags/javascript-basic/">Javascript-Basic</a>
+        
+            <a href="/MyPortfolio/en/tags/if-else/">If-Else</a>
+        
+            <a href="/MyPortfolio/en/tags/switch-case/">Switch-Case</a>
+        
+            <a href="/MyPortfolio/en/tags/control-flow/">Control-Flow</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/MyPortfolio/en/p/b%C3%A0i-10-null-v%C3%A0-undefined-hi%E1%BB%83u-r%C3%B5-s%E1%BB%B1-kh%C3%A1c-bi%E1%BB%87t/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.youtube.com/vi/CeM74bs91Sw/maxresdefault.jpg" loading="lazy" data-key="" data-hash="https://img.youtube.com/vi/CeM74bs91Sw/maxresdefault.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài 10 - Null và Undefined - Hiểu Rõ Sự Khác Biệt</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/MyPortfolio/en/p/b%C3%A0i-9-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u-boolean-logic-%C4%91%C3%BAng/sai-trong-javascript/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.youtube.com/vi/2Uvl-lJ9fBY/maxresdefault.jpg" loading="lazy" data-key="" data-hash="https://img.youtube.com/vi/2Uvl-lJ9fBY/maxresdefault.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài 9 - Kiểu Dữ Liệu Boolean - Logic Đúng/Sai Trong JavaScript</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/MyPortfolio/en/p/b%C3%A0i-8-template-literals-number-string-c%C3%B4ng-c%E1%BB%A5-m%E1%BA%A1nh-m%E1%BA%BD-es6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.youtube.com/vi/hiFBsPtFgOg/maxresdefault.jpg" loading="lazy" data-key="" data-hash="https://img.youtube.com/vi/hiFBsPtFgOg/maxresdefault.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài 8 - Template Literals, Number-String - Công Cụ Mạnh Mẽ ES6</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/MyPortfolio/en/p/b%C3%A0i-7-kh%C3%A1i-qu%C3%A1t-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u-chu%E1%BB%97i-string-x%E1%BB%AD-l%C3%BD-v%C4%83n-b%E1%BA%A3n/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.youtube.com/vi/0ABTCy5FbP4/maxresdefault.jpg" loading="lazy" data-key="" data-hash="https://img.youtube.com/vi/0ABTCy5FbP4/maxresdefault.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài 7 - Khái Quát Kiểu Dữ Liệu Chuỗi (String) - Xử Lý Văn Bản</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/MyPortfolio/en/p/b%C3%A0i-6-ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u-s%E1%BB%91-number-l%C3%A0m-ch%E1%BB%A7-s%E1%BB%91-h%E1%BB%8Dc-javascript/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="https://img.youtube.com/vi/bynuI8B2uho/maxresdefault.jpg" loading="lazy" data-key="" data-hash="https://img.youtube.com/vi/bynuI8B2uho/maxresdefault.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài 6 - Kiểu Dữ Liệu Số Number - Làm Chủ Số Học JavaScript</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Woong Ho Tuan Nguyen
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.31.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/MyPortfolio/ts/main.ca076315cf519b77eb1a70af285ed4d187a65a2cc2f65d161aa765482813a62c.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<div id="custom-language-switcher" style="position: fixed; top: 80px; right: 20px; z-index: 1000; background: var(--card-background); padding: 10px 15px; border-radius: 8px; box-shadow: var(--shadow-l1); display: flex; gap: 10px; align-items: center;">
+    <button id="lang-en" class="lang-btn" data-lang="en" style="padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; background: #4285f4; color: white; transition: all 0.3s ease;">
+        🇬🇧 EN
+    </button>
+    <button id="lang-vi" class="lang-btn" data-lang="vi" style="padding: 8px 16px; border: none; border-radius: 6px; cursor: pointer; font-weight: 600; background: #34a853; color: white; transition: all 0.3s ease;">
+        🇻🇳 VI
+    </button>
+</div>
+
+
+<div id="google_translate_element" style="display: none;"></div>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+
+const translations = {
+    en: {
+        'Home': 'Home',
+        'Posts': 'Posts',
+        'About': 'About',
+        'Archives': 'Archives',
+        'Search': 'Search',
+        'Links': 'Links',
+        'Dark Mode': 'Dark Mode',
+        'Toggle Menu': 'Toggle Menu',
+        'Table of contents': 'Table of contents',
+        'Related content': 'Related content',
+        'Back': 'Back',
+        'minute read': 'minute read',
+        'Last updated on': 'Last updated on',
+        'Not Found': 'Not Found',
+        'This page does not exist': 'This page does not exist',
+        'More': 'More',
+        'GitHub': 'GitHub',
+        'LinkedIn': 'LinkedIn',
+        'Mail': 'Mail'
+    },
+    vi: {
+        'Home': 'Trang chủ',
+        'Posts': 'Bài viết',
+        'About': 'Giới thiệu',
+        'Archives': 'Lưu trữ',
+        'Search': 'Tìm kiếm',
+        'Links': 'Liên kết',
+        'Dark Mode': 'Chế độ tối',
+        'Toggle Menu': 'Menu',
+        'Table of contents': 'Mục lục',
+        'Related content': 'Nội dung liên quan',
+        'Back': 'Quay lại',
+        'minute read': 'phút đọc',
+        'Last updated on': 'Cập nhật',
+        'Not Found': 'Không tìm thấy',
+        'This page does not exist': 'Trang này không tồn tại',
+        'More': 'Xem thêm',
+        'GitHub': 'GitHub',
+        'LinkedIn': 'LinkedIn',
+        'Mail': 'Email'
+    }
+};
+
+
+let currentLang = localStorage.getItem('preferredLang') || 'en';
+
+
+function triggerGoogleTranslate(lang) {
+    const selectField = document.querySelector("select.goog-te-combo");
+    if (selectField) {
+        selectField.value = lang;
+        selectField.dispatchEvent(new Event('change'));
+    }
+}
+
+
+function translateCustomElements(lang) {
+    
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+        }
+    });
+
+    
+    localStorage.setItem('preferredLang', lang);
+    currentLang = lang;
+    
+    
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.style.opacity = '1';
+            btn.style.transform = 'scale(1.05)';
+        } else {
+            btn.style.opacity = '0.6';
+            btn.style.transform = 'scale(1)';
+        }
+    });
+}
+
+
+window.addEventListener('load', function() {
+    
+    document.querySelectorAll('.lang-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            const googleLang = lang === 'vi' ? 'vi' : 'en';
+            
+            
+            triggerGoogleTranslate(googleLang);
+            
+            
+            setTimeout(() => {
+                translateCustomElements(lang);
+            }, 500);
+        });
+    });
+
+    
+    if (currentLang === 'vi') {
+        setTimeout(() => {
+            triggerGoogleTranslate('vi');
+            translateCustomElements('vi');
+        }, 1000);
+    } else {
+        translateCustomElements('en');
+    }
+});
+
+
+window.addEventListener('load', function() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .goog-te-banner-frame,
+        .goog-te-banner-frame.skiptranslate,
+        .skiptranslate iframe,
+        body > .skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+        .goog-logo-link {
+            display: none !important;
+        }
+        .goog-te-gadget {
+            color: transparent !important;
+        }
+        .goog-te-gadget .goog-te-combo {
+            display: none !important;
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
+
+<style>
+.lang-btn:hover {
+    transform: scale(1.1) !important;
+    opacity: 1 !important;
+}
+
+.lang-btn:active {
+    transform: scale(0.95) !important;
+}
+
+#custom-language-switcher {
+    font-family: var(--sys-font-family);
+}
+
+@media (max-width: 768px) {
+    #custom-language-switcher {
+        top: 10px;
+        right: 10px;
+        padding: 8px 12px;
+    }
+    
+    .lang-btn {
+        padding: 6px 12px !important;
+        font-size: 0.9em;
+    }
+}
+</style>
+
+    </body>
+</html>

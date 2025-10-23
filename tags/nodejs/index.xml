@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Nodejs on Woong Ho Tuan Nguyen</title>
+        <link>https://nguyenwoong20.github.io/MyPortfolio/tags/nodejs/</link>
+        <description>Recent content in Nodejs on Woong Ho Tuan Nguyen</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <managingEditor>nguyenwoong20@gmail.com (Nguyen)</managingEditor>
+        <webMaster>nguyenwoong20@gmail.com (Nguyen)</webMaster>
+        <lastBuildDate>Sun, 28 Sep 2025 09:30:00 +0700</lastBuildDate><atom:link href="https://nguyenwoong20.github.io/MyPortfolio/tags/nodejs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Bài 1 - Tải &amp; Cài Đặt NodeJS - Khởi Đầu Hành Trình JavaScript</title>
+        <link>https://nguyenwoong20.github.io/MyPortfolio/p/b%C3%A0i-1-t%E1%BA%A3i-c%C3%A0i-%C4%91%E1%BA%B7t-nodejs-kh%E1%BB%9Fi-%C4%91%E1%BA%A7u-h%C3%A0nh-tr%C3%ACnh-javascript/</link>
+        <pubDate>Sun, 28 Sep 2025 09:00:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>https://nguyenwoong20.github.io/MyPortfolio/p/b%C3%A0i-1-t%E1%BA%A3i-c%C3%A0i-%C4%91%E1%BA%B7t-nodejs-kh%E1%BB%9Fi-%C4%91%E1%BA%A7u-h%C3%A0nh-tr%C3%ACnh-javascript/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/lwsS-ikKnPs/maxresdefault.jpg" alt="Featured image of post Bài 1 - Tải &amp; Cài Đặt NodeJS - Khởi Đầu Hành Trình JavaScript" /&gt;&lt;h2 id=&#34;-video-hướng-dẫn-chi-tiết&#34;&gt;🎥 Video hướng dẫn chi tiết
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Nguồn:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/playlist?list=PL33lvabfss1ywJRoh40x9fmAfgbI1hpVX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Khóa học JavaScript - Kteam&lt;/a&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/lwsS-ikKnPs&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-tại-sao-cần-nodejs&#34;&gt;🚀 Tại sao cần NodeJS?
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;NodeJS&lt;/strong&gt; cho phép JavaScript chạy trên máy tính (không chỉ trình duyệt).&lt;/p&gt;
+&lt;h2 id=&#34;-cách-cài-đặt-nodejs&#34;&gt;📥 Cách cài đặt NodeJS
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Vào &lt;a class=&#34;link&#34; href=&#34;https://nodejs.org&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://nodejs.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tải phiên bản &lt;strong&gt;LTS&lt;/strong&gt; (khuyên dùng)&lt;/li&gt;
+&lt;li&gt;Cài đặt bình thường (Next → Next → Install)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-kiểm-tra-cài-đặt&#34;&gt;✅ Kiểm tra cài đặt
+&lt;/h2&gt;&lt;p&gt;Mở &lt;strong&gt;Command Prompt&lt;/strong&gt; và chạy:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node --version
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;npm --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Kết quả mong đợi:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;v18.17.0  &lt;span style=&#34;color:#75715e&#34;&gt;# NodeJS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;9.6.7     &lt;span style=&#34;color:#75715e&#34;&gt;# npm&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Extensions hữu ích:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JavaScript (ES6) code snippets&lt;/li&gt;
+&lt;li&gt;Bracket Pair Colorizer&lt;/li&gt;
+&lt;li&gt;Live Server&lt;/li&gt;
+&lt;li&gt;Prettier - Code formatter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lựa-chọn-khác&#34;&gt;Lựa chọn khác:
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;WebStorm&lt;/strong&gt; (trả phí, rất mạnh)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sublime Text&lt;/strong&gt; (nhẹ, nhanh)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Atom&lt;/strong&gt; (miễn phí, tùy biến cao)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-chuẩn-bị-cho-bài-tiếp-theo&#34;&gt;🎯 Chuẩn bị cho bài tiếp theo
+&lt;/h2&gt;&lt;p&gt;Sau khi cài đặt xong, bạn đã sẵn sàng để:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ Chạy code JavaScript trên máy tính&lt;/li&gt;
+&lt;li&gt;✅ Sử dụng npm để cài đặt packages&lt;/li&gt;
+&lt;li&gt;✅ Bắt đầu hành trình học JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-tip-cho-người-mới&#34;&gt;💡 Tip cho người mới
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Tạo thư mục cho dự án học tập
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;mkdir&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;javascript&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;learning&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;cd&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;javascript&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;learning&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// Tạo file đầu tiên
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;touch&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;js&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// macOS/Linux
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;echo&lt;/span&gt;. &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;js&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;// Windows
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-thử-thách-nhỏ&#34;&gt;🔥 Thử thách nhỏ
+&lt;/h2&gt;&lt;h2 id=&#34;-tóm-tắt&#34;&gt;🏆 Tóm tắt
+&lt;/h2&gt;&lt;p&gt;✅ &lt;strong&gt;NodeJS&lt;/strong&gt; cho phép chạy JavaScript trên máy tính&lt;br&gt;
+✅ Tải phiên bản &lt;strong&gt;LTS&lt;/strong&gt; từ nodejs.org&lt;br&gt;
+✅ Kiểm tra cài đặt bằng &lt;code&gt;node --version&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-bài-tiếp-theo&#34;&gt;📚 Bài tiếp theo
+&lt;/h3&gt;&lt;p&gt;👉 &lt;a class=&#34;link&#34; href=&#34;../bai-2-chay-chuong-trinh-js/&#34; &gt;&lt;strong&gt;Bài 2: Chạy chương trình JavaScript cơ bản bằng Node&lt;/strong&gt;&lt;/a&gt; - Tạo và chạy file JavaScript đầu tiên của bạn!&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Bài 2 - Chạy Chương Trình JavaScript Cơ Bản Bằng Node</title>
+        <link>https://nguyenwoong20.github.io/MyPortfolio/p/bai-2-chay-chuong-trinh-js/</link>
+        <pubDate>Sun, 28 Sep 2025 09:30:00 +0700</pubDate>
+        <author>nguyenwoong20@gmail.com (Nguyen)</author>
+        <guid>https://nguyenwoong20.github.io/MyPortfolio/p/bai-2-chay-chuong-trinh-js/</guid>
+        <description>&lt;img src="https://img.youtube.com/vi/cbZfmmIlzaU/maxresdefault.jpg" alt="Featured image of post Bài 2 - Chạy Chương Trình JavaScript Cơ Bản Bằng Node" /&gt;&lt;h2 id=&#34;-video-hướng-dẫn-chi-tiết&#34;&gt;🎥 Video hướng dẫn chi tiết
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Nguồn:&lt;/strong&gt; &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/playlist?list=PL33lvabfss1ywJRoh40x9fmAfgbI1hpVX&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Khóa học JavaScript - Kteam&lt;/a&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/cbZfmmIlzaU&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-tạo-file-javascript-đầu-tiên&#34;&gt;1. Tạo file JavaScript đầu tiên
+&lt;/h2&gt;&lt;p&gt;Mở Terminal hoặc VS Code.&lt;/p&gt;
+&lt;p&gt;Lệnh tạo thư mục và di chuyển vào thư mục mới:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir my-first-js
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd my-first-js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tạo file mới: &lt;code&gt;hello.js&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-code-hello-world-đơn-giản&#34;&gt;2. Code Hello World đơn giản
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// In ra màn hình
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, JavaScript!&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Chào mừng bạn đến với NodeJS.&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-chạy-file-bằng-nodejs&#34;&gt;3. Chạy file bằng NodeJS
+&lt;/h2&gt;&lt;p&gt;Trong terminal, chạy:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;node hello.js
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kết quả:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Hello, JavaScript!
+Chào mừng bạn đến với NodeJS.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;4-sử-dụng-consolelog&#34;&gt;4. Sử dụng console.log
+&lt;/h2&gt;&lt;p&gt;In bất cứ thứ gì lên màn hình console:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Thông báo&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-thông-tin-hệ-thống-bằng-processversion-processplatform&#34;&gt;5. Thông tin hệ thống bằng process.version, process.platform
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Phiên bản NodeJS:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;version&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;OS:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;process&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;platform&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;6-hướng-dẫn-chạy-với-repl&#34;&gt;6. Hướng dẫn chạy với REPL
+&lt;/h2&gt;&lt;p&gt;Gõ lệnh &lt;code&gt;node&lt;/code&gt; và thử trực tiếp:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello trực tiếp&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;7-debug-nhanh&#34;&gt;7. Debug nhanh
+&lt;/h2&gt;&lt;p&gt;Nếu thấy lỗi về tên file, cú pháp hoặc biến chưa khai báo: kiểm tra lại chính xác tên file, dấu ngoặc, khai báo biến.&lt;/p&gt;
+&lt;p&gt;Đảm bảo file lưu dưới dạng &lt;code&gt;.js&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;8-bài-tập-nhỏ&#34;&gt;8. Bài tập nhỏ
+&lt;/h2&gt;&lt;p&gt;Tạo file &lt;code&gt;about-me.js&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tên:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tên của bạn&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tuổi:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nghề nghiệp:&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Học lập trình&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Tạo file &lt;code&gt;calculator.js&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a + b =&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a - b =&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;a&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;b&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;chốt-lại&#34;&gt;Chốt lại:
+&lt;/h2&gt;&lt;p&gt;Bài 2 giúp bạn làm chủ cách tạo &amp;amp; chạy file JavaScript đầu tiên bằng NodeJS, sử dụng console.log để xuất dữ liệu, thao tác và debug đơn giản, đặt nền móng cho các bài học kế tiếp.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-bài-tiếp-theo&#34;&gt;📚 Bài tiếp theo
+&lt;/h3&gt;&lt;p&gt;👉 &lt;a class=&#34;link&#34; href=&#34;../bai-3-bien-va-hang-so-noi-luu-tru-du-lieu/&#34; &gt;&lt;strong&gt;Bài 3: Biến và Hằng số&lt;/strong&gt;&lt;/a&gt; - Tìm hiểu cách lưu trữ và sử dụng dữ liệu trong JavaScript!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
