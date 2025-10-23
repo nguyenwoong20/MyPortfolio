@@ -1,5 +1,6 @@
 ---
 title: "Bài 8 - Template Literals, Number-String - Công Cụ Mạnh Mẽ ES6"
+slug: "bai-8-template-literals"
 date: 2025-09-28T12:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "template-literals", "es6", "string-number"]
@@ -141,4 +142,4 @@ Bài 8 giúp bạn hiểu Template Literals với backticks và `${}` để nhú
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 9: Kiểu dữ liệu Boolean**](../bai-9-kieu-du-lieu-boolean/) - Tìm hiểu về logic đúng/sai và các phép toán Boolean!
+👉 [**Bài 9: Kiểu dữ liệu Boolean**](/MyPortfolio/p/bai-9-kieu-du-lieu-boolean/) - Tìm hiểu về logic đúng/sai và các phép toán Boolean!

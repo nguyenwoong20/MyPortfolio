@@ -1,5 +1,6 @@
 ---
 title: "Bài 15 - Function Nâng Cao - Higher-order & Callback"
+slug: "bai-15-function-nang-cao"
 date: 2025-09-28T15:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "higher-order-function", "callback", "closure"]

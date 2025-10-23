@@ -1,5 +1,6 @@
 ---
 title: "Bài 5 - Toán Tử Gán và Toán Tử So Sánh - Phép Toán Cơ Bản"
+slug: "bai-5-toan-tu-gan-so-sanh"
 date: 2025-09-28T11:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "operators", "assignment", "comparison"]
@@ -123,4 +124,4 @@ Bài 5 giúp bạn hiểu các toán tử số học (`+`, `-`, `*`, `/`, `%`), 
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 6: Kiểu dữ liệu số Number**](../bai-6-kieu-du-lieu-number/) - Tìm hiểu chi tiết về số trong JavaScript!
+👉 [**Bài 6: Kiểu dữ liệu số Number**](/MyPortfolio/p/bai-6-kieu-du-lieu-number/) - Tìm hiểu chi tiết về số trong JavaScript!

@@ -1,5 +1,6 @@
 ---
 title: "Bài 4 - Lớp (Class) và Constructor trong Java"
+slug: "bai-4-class-constructor"
 date: 2025-09-22T10:30:00+07:00
 categories: ["Java Series", "Java Cơ Bản"]
 tags: ["java-basic"]
@@ -93,4 +94,4 @@ public Student(String name) {
 
 - Class, constructor và kỹ năng dùng this chuẩn xác là chìa khoá lập trình OOP Java hiệu quả.
 
-## Tiếp theo: [Bài 5 – Điều kiện & vòng lặp](/p/java_bai5_control/)
+## Tiếp theo: [Bài 5 – Điều kiện & vòng lặp](/MyPortfolio/p/bai-5-control-flow/)

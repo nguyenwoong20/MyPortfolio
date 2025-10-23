@@ -5,6 +5,7 @@ categories: ["java-series", "java Nâng Cao"]
 tags: ["java-advanced"]
 series: ["Java Advanced"]
 series_order: 12
+slug: "bai-12-override-overload"
 draft: false
 image: "https://img.youtube.com/vi/F-3n_mzG4o8/maxresdefault.jpg"
 ---

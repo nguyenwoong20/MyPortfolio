@@ -1,5 +1,6 @@
 ---
 title: "Bài 11 - Câu Lệnh Điều Kiện if-else, switch-case - Điều Khiển Luồng"
+slug: "bai-11-cau-lenh-dieu-kien"
 date: 2025-09-28T14:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "if-else", "switch-case", "control-flow"]
@@ -147,4 +148,4 @@ console.log(status); // "John online"
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 12: Vòng lặp While**](../bai-12-vong-lap-while/) - Học cách tạo vòng lặp với while và do-while!
+👉 [**Bài 12: Vòng lặp While**](/MyPortfolio/p/bai-12-vong-lap-while/) - Học cách tạo vòng lặp với while và do-while!

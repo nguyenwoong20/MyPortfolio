@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced"]
 series: ["Java Advanced"]
 series_order: 1
+slug: "bai-1-constructor-advanced"
 draft: false
 image: "https://img.youtube.com/vi/NqfY0cQQrhA/maxresdefault.jpg"
 ---
@@ -109,4 +110,4 @@ class Dog extends Animal {
 - Copy constructor an toàn khi cần nhân bản đối tượng
 - Private constructor là kỹ thuật quan trọng trong design pattern
 
-## Tiếp theo: [Từ khóa this trong Java](/p/java_this/)
+## Tiếp theo: [Bài 2: Từ khóa this trong Java](/MyPortfolio/p/bai-2-this-keyword/)

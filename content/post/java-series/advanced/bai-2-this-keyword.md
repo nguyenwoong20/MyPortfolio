@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced"]
 series: ["Java Advanced"]
 series_order: 2
+slug: "bai-2-this-keyword"
 draft: false
 image: "https://img.youtube.com/vi/yvDICGATFDc/maxresdefault.jpg"
 ---
@@ -97,4 +98,4 @@ public class OuterClass {
 - Method chaining với `this` giúp code ngắn gọn, dễ đọc
 - Hiểu về `this` là nền tảng cho nhiều design pattern
 
-## Tiếp theo: [Từ khóa SUPER trong Java](/p/java_super/)
+## Tiếp theo: [Bài 3: Từ khóa SUPER trong Java](/MyPortfolio/p/bai-3-super-keyword/)

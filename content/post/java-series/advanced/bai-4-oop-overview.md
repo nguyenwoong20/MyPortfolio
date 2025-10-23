@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced", "oop"]
 series: ["Java Advanced"]
 series_order: 4
+slug: "bai-4-oop-overview"
 draft: false
 image: "https://img.youtube.com/vi/IcYpk-Kf4Fo/maxresdefault.jpg"
 ---
@@ -122,4 +123,4 @@ class Circle extends Shape {
 - 4 trụ cột OOP là nền tảng cho thiết kế phần mềm tốt
 - Cần thời gian thực hành để nắm vững và áp dụng hiệu quả
 
-## Tiếp theo: [Tính Kế thừa trong Java](/p/java_inheritance/)
+## Tiếp theo: [Bài 5: Tính Kế thừa trong Java](/MyPortfolio/p/bai-5-inheritance/)

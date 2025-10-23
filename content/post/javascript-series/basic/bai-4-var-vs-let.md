@@ -1,5 +1,6 @@
 ---
 title: "Bài 4 - Khởi Tạo Biến Với var và let - Sự Khác Biệt Quan Trọng"
+slug: "bai-4-toan-tu-so-hoc"
 date: 2025-09-28T10:30:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "var", "let", "scope"]
@@ -160,4 +161,4 @@ Bài 4 giúp bạn hiểu sự khác biệt giữa `var` và `let`: `var` có fu
 ---
 
 ### 📚 Bài tiếp theo
-👉 [**Bài 5: Toán tử gán và toán tử so sánh**](../bai-5-toan-tu-gan-so-sanh/) - Học cách thực hiện phép toán và so sánh trong JavaScript!
+👉 [**Bài 5: Toán tử gán và toán tử so sánh**](/MyPortfolio/p/bai-5-toan-tu-gan-so-sanh/)- Học cách thực hiện phép toán và so sánh trong JavaScript!

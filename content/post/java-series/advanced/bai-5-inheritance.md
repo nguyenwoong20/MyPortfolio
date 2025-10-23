@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced", "oop"]
 series: ["Java Advanced"]
 series_order: 5
+slug: "bai-5-inheritance"
 draft: false
 image: "https://img.youtube.com/vi/8h42m579ez4/maxresdefault.jpg"
 ---
@@ -130,4 +131,4 @@ Class con phải có thể thay thế class cha mà không gây lỗi.
 - Ưu tiên composition trong nhiều trường hợp
 - Tuân thủ SOLID principles khi thiết kế kế thừa
 
-## Tiếp theo: [Tính Đóng Gói trong Java](/p/java_encapsulation/)
+## Tiếp theo: [Bài 6: Tính Đóng Gói trong Java](/MyPortfolio/p/bai-6-encapsulation/)

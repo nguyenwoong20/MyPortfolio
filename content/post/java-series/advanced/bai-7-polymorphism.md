@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced", "oop"]
 series: ["Java Advanced"]
 series_order: 7
+slug: "bai-7-polymorphism"
 draft: false
 image: "https://img.youtube.com/vi/OfEYrSBovtw/maxresdefault.jpg"
 ---
@@ -150,4 +151,4 @@ if (obj instanceof Dog) {
 - Kết hợp với interface tạo code loosely coupled
 - Cẩn thận với downcasting để tránh lỗi runtime
 
-## Tiếp theo: [Abstract Class trong Java](/p/java_abstract_class/)
+## Tiếp theo: [Bài 8: Abstract Class trong Java](/MyPortfolio/p/bai-8-abstract-class/)

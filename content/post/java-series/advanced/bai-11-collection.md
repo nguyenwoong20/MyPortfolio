@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced"]
 series: ["Java Advanced"]
 series_order: 11
+slug: "bai-11-collection"
 draft: false
 image: "https://img.youtube.com/vi/m4QD2ykLiiw/maxresdefault.jpg"
 ---
@@ -110,4 +111,4 @@ int index = fruits.indexOf("Apple");
 - HashMap: Tìm kiếm key nhanh O(1)
 - TreeMap: Tìm kiếm key O(log n), key tự sắp xếp
 
-## Tiếp theo: [Override và Overload trong Java](/p/java_override_overload/)
+## Tiếp theo: [Bài 12: Override và Overload trong Java](/MyPortfolio/p/bai-12-override-overload/)

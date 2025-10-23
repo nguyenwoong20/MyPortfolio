@@ -1,5 +1,6 @@
 ---
 title: "Bài 16 - Đệ Quy Trong JavaScript - Recursion"
+slug: "bai-16-de-quy"
 date: 2025-09-28T16:00:00+07:00
 categories: ["JavaScript Series", "JavaScript Cơ Bản"]
 tags: ["javascript-basic", "recursion", "algorithm", "problem-solving"]

@@ -5,6 +5,7 @@ categories: ["Java Series", "Java Nâng Cao"]
 tags: ["java-advanced", "oop"]
 series: ["Java Advanced"]
 series_order: 8
+slug: "bai-8-abstract-class"
 draft: false
 image: "https://img.youtube.com/vi/Hbp2zLIqmak/maxresdefault.jpg"
 ---
@@ -181,4 +182,4 @@ public abstract class Logger {
 - Kết hợp tốt với Template Method Pattern
 - Cần cân nhắc giữa abstract class và interface
 
-## Tiếp theo: [Interface trong Java](/p/java_interface/)
+## Tiếp theo: [Bài 9: Interface trong Java](/MyPortfolio/p/bai-9-interface/)
